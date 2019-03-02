@@ -12,17 +12,21 @@ class AmiiboListVC: UIViewController {
     
     let tableView = UITableView()
     var safeArea: UILayoutGuide!
-    let amiiboList = ["Zelda", "Link", "Navi", "Ganondorf"]
+    var amiiboList = [Amiibo]()
     
     override func viewDidLoad() {
         view.backgroundColor = .white
         safeArea = view.layoutMarginsGuide
-        
-        tableView.dataSource = self
-        
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cellid")
-        
         setupView()
+        
+        let anonymousFunction = { (fetchedAmiiboList: [Amiibo]) in
+            DispatchQueue.main.async {
+                self.amiiboList = fetchedAmiiboList
+                self.tableView.reloadData()
+            }
+        }
+        
+         AmiiboAPI.shared.fetchAmiiboList(onComplete: anonymousFunction)
         
     }//end viewDidLoad()
     
@@ -30,6 +34,9 @@ class AmiiboListVC: UIViewController {
     func setupView() {
         //ALWAYS add the UIView FIRST before setting contraints
         view.addSubview(tableView)
+        
+        tableView.dataSource = self
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cellid")
         
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.topAnchor.constraint(equalTo: safeArea.topAnchor).isActive = true
@@ -51,9 +58,9 @@ extension AmiiboListVC: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cellid", for: indexPath)
         
-        let name = amiiboList[indexPath.row]
+        let amiibo = amiiboList[indexPath.row]
         
-        cell.textLabel?.text = name
+        cell.textLabel?.text = amiibo.name
         return cell
     }
     
