@@ -8,8 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		FF5FDE58222A2D8A00478A17 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5FDE57222A2D8A00478A17 /* AppDelegate.swift */; };
-		FF5FDE5A222A2D8A00478A17 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5FDE59222A2D8A00478A17 /* ViewController.swift */; };
-		FF5FDE5D222A2D8A00478A17 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF5FDE5B222A2D8A00478A17 /* Main.storyboard */; };
+		FF5FDE5A222A2D8A00478A17 /* AmiiboListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5FDE59222A2D8A00478A17 /* AmiiboListVC.swift */; };
 		FF5FDE5F222A2D8C00478A17 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF5FDE5E222A2D8C00478A17 /* Assets.xcassets */; };
 		FF5FDE62222A2D8C00478A17 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF5FDE60222A2D8C00478A17 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
@@ -17,8 +16,7 @@
 /* Begin PBXFileReference section */
 		FF5FDE54222A2D8A00478A17 /* ultimateTableView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ultimateTableView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF5FDE57222A2D8A00478A17 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FF5FDE59222A2D8A00478A17 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		FF5FDE5C222A2D8A00478A17 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FF5FDE59222A2D8A00478A17 /* AmiiboListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmiiboListVC.swift; sourceTree = "<group>"; };
 		FF5FDE5E222A2D8C00478A17 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FF5FDE61222A2D8C00478A17 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FF5FDE63222A2D8C00478A17 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -55,8 +53,7 @@
 			isa = PBXGroup;
 			children = (
 				FF5FDE57222A2D8A00478A17 /* AppDelegate.swift */,
-				FF5FDE59222A2D8A00478A17 /* ViewController.swift */,
-				FF5FDE5B222A2D8A00478A17 /* Main.storyboard */,
+				FF5FDE59222A2D8A00478A17 /* AmiiboListVC.swift */,
 				FF5FDE5E222A2D8C00478A17 /* Assets.xcassets */,
 				FF5FDE60222A2D8C00478A17 /* LaunchScreen.storyboard */,
 				FF5FDE63222A2D8C00478A17 /* Info.plist */,
@@ -124,7 +121,6 @@
 			files = (
 				FF5FDE62222A2D8C00478A17 /* LaunchScreen.storyboard in Resources */,
 				FF5FDE5F222A2D8C00478A17 /* Assets.xcassets in Resources */,
-				FF5FDE5D222A2D8A00478A17 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,7 +131,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FF5FDE5A222A2D8A00478A17 /* ViewController.swift in Sources */,
+				FF5FDE5A222A2D8A00478A17 /* AmiiboListVC.swift in Sources */,
 				FF5FDE58222A2D8A00478A17 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -143,14 +139,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		FF5FDE5B222A2D8A00478A17 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				FF5FDE5C222A2D8A00478A17 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		FF5FDE60222A2D8C00478A17 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
