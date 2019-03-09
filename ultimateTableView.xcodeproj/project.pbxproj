@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FF441538223448B200D18862 /* AmiiboCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF441537223448B200D18862 /* AmiiboCell.swift */; };
 		FF5FDE58222A2D8A00478A17 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5FDE57222A2D8A00478A17 /* AppDelegate.swift */; };
 		FF5FDE5A222A2D8A00478A17 /* AmiiboListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5FDE59222A2D8A00478A17 /* AmiiboListVC.swift */; };
 		FF5FDE5F222A2D8C00478A17 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF5FDE5E222A2D8C00478A17 /* Assets.xcassets */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FF441537223448B200D18862 /* AmiiboCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmiiboCell.swift; sourceTree = "<group>"; };
 		FF5FDE54222A2D8A00478A17 /* ultimateTableView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ultimateTableView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF5FDE57222A2D8A00478A17 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FF5FDE59222A2D8A00478A17 /* AmiiboListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmiiboListVC.swift; sourceTree = "<group>"; };
@@ -56,6 +58,7 @@
 			children = (
 				FF5FDE57222A2D8A00478A17 /* AppDelegate.swift */,
 				FF5FDE59222A2D8A00478A17 /* AmiiboListVC.swift */,
+				FF441537223448B200D18862 /* AmiiboCell.swift */,
 				FF5FDE69222AF55C00478A17 /* AmiiboAPI.swift */,
 				FF5FDE5E222A2D8C00478A17 /* Assets.xcassets */,
 				FF5FDE60222A2D8C00478A17 /* LaunchScreen.storyboard */,
@@ -134,6 +137,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FF441538223448B200D18862 /* AmiiboCell.swift in Sources */,
 				FF5FDE5A222A2D8A00478A17 /* AmiiboListVC.swift in Sources */,
 				FF5FDE58222A2D8A00478A17 /* AppDelegate.swift in Sources */,
 				FF5FDE6A222AF55C00478A17 /* AmiiboAPI.swift in Sources */,
