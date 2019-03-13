@@ -13,7 +13,7 @@ class AmiiboCell: UITableViewCell {
     
     var safeArea: UILayoutGuide!
     
-    let imageIV = UIImageView()
+    let imageIV = CustomImageView()
     let nameLabel = UILabel()
     let gameSeriesLabel = UILabel()
     
@@ -45,7 +45,7 @@ class AmiiboCell: UITableViewCell {
         imageIV.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
         imageIV.widthAnchor.constraint(equalToConstant: 40).isActive = true
         imageIV.heightAnchor.constraint(equalToConstant: 40).isActive = true
-        imageIV.backgroundColor = .red
+        //imageIV.backgroundColor = .red
         
     }//end setupImageView()
     

@@ -13,6 +13,7 @@
 		FF5FDE5F222A2D8C00478A17 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF5FDE5E222A2D8C00478A17 /* Assets.xcassets */; };
 		FF5FDE62222A2D8C00478A17 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF5FDE60222A2D8C00478A17 /* LaunchScreen.storyboard */; };
 		FF5FDE6A222AF55C00478A17 /* AmiiboAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5FDE69222AF55C00478A17 /* AmiiboAPI.swift */; };
+		FFE72C14223898DE00170805 /* CustomImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE72C13223898DE00170805 /* CustomImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		FF5FDE61222A2D8C00478A17 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FF5FDE63222A2D8C00478A17 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FF5FDE69222AF55C00478A17 /* AmiiboAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmiiboAPI.swift; sourceTree = "<group>"; };
+		FFE72C13223898DE00170805 /* CustomImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 			children = (
 				FF5FDE57222A2D8A00478A17 /* AppDelegate.swift */,
 				FF5FDE59222A2D8A00478A17 /* AmiiboListVC.swift */,
+				FFE72C13223898DE00170805 /* CustomImageView.swift */,
 				FF441537223448B200D18862 /* AmiiboCell.swift */,
 				FF5FDE69222AF55C00478A17 /* AmiiboAPI.swift */,
 				FF5FDE5E222A2D8C00478A17 /* Assets.xcassets */,
@@ -141,6 +144,7 @@
 				FF5FDE5A222A2D8A00478A17 /* AmiiboListVC.swift in Sources */,
 				FF5FDE58222A2D8A00478A17 /* AppDelegate.swift in Sources */,
 				FF5FDE6A222AF55C00478A17 /* AmiiboAPI.swift in Sources */,
+				FFE72C14223898DE00170805 /* CustomImageView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
