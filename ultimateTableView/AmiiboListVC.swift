@@ -12,7 +12,7 @@ class AmiiboListVC: UIViewController {
     
     let tableView = UITableView()
     var safeArea: UILayoutGuide!
-    var amiiboList = [Amiibo]()
+    var amiiboList = [AmiiboForView ]()
     
     override func viewDidLoad() {
         view.backgroundColor = .white
@@ -21,7 +21,15 @@ class AmiiboListVC: UIViewController {
         
         let anonymousFunction = { (fetchedAmiiboList: [Amiibo]) in
             DispatchQueue.main.async {
-                self.amiiboList = fetchedAmiiboList
+                let amiiboForViewList = fetchedAmiiboList.map {amiibo in
+                    return AmiiboForView(
+                        name: amiibo.name,
+                        gameSeries: amiibo.gameSeries,
+                        imageUrl: amiibo.image,
+                        count: 0
+                    )
+                }
+                self.amiiboList = amiiboForViewList
                 self.tableView.reloadData()
             }
         }
@@ -66,8 +74,9 @@ extension AmiiboListVC: UITableViewDataSource {
         
         amiiboCell.nameLabel.text = amiibo.name
         amiiboCell.gameSeriesLabel.text = amiibo.gameSeries
+        amiiboCell.owningCountLabel.text = String(amiibo.count)
         
-        if let url = URL(string: amiibo.image) {
+        if let url = URL(string: amiibo.imageUrl) {
             amiiboCell.imageIV.loadImage(from: url)
         }
         
@@ -96,5 +105,25 @@ extension AmiiboListVC: UITableViewDelegate {
         return UISwipeActionsConfiguration(actions: [deleteAction])
         
     }//end trailingSwipeActionsConfigurationForRowAt
+    
+    func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        
+        let countAction = UIContextualAction(style: .normal, title: "Count Up") { (action, view, completionHandler) in
+            
+            //manipulating the data layer
+            let currentCount = self.amiiboList[indexPath.row].count
+            self.amiiboList[indexPath.row].count = currentCount + 1
+            
+            //manipulating the presentation layer
+            if let cell = self.tableView.cellForRow(at: indexPath) as? AmiiboCell {
+                cell.owningCountLabel.text = String(self.amiiboList[indexPath.row].count)
+            }
+            
+            completionHandler(true)
+            
+        }//end countAction
+        
+        return UISwipeActionsConfiguration(actions: [countAction])
+    }//end leadingSwipActionsConfigurationForRowAt
     
 }//end AmiiboListVC: UITableViewDelegate

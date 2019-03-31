@@ -16,6 +16,7 @@ class AmiiboCell: UITableViewCell {
     let imageIV = CustomImageView()
     let nameLabel = UILabel()
     let gameSeriesLabel = UILabel()
+    let owningCountLabel = UILabel()
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -31,6 +32,7 @@ class AmiiboCell: UITableViewCell {
     func setupView() {
         
         safeArea = layoutMarginsGuide
+        setupOwningCountLabel()
         setupImageView()
         setupNameLabel()
         setupGameSeriesLabel()
@@ -42,7 +44,7 @@ class AmiiboCell: UITableViewCell {
         
         imageIV.contentMode = .scaleAspectFit
         imageIV.translatesAutoresizingMaskIntoConstraints = false
-        imageIV.leadingAnchor.constraint(equalTo: safeArea.leadingAnchor).isActive = true
+        imageIV.leadingAnchor.constraint(equalTo: owningCountLabel.trailingAnchor, constant: 5).isActive = true
         imageIV.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
         imageIV.widthAnchor.constraint(equalToConstant: 40).isActive = true
         imageIV.heightAnchor.constraint(equalToConstant: 40).isActive = true
@@ -71,5 +73,14 @@ class AmiiboCell: UITableViewCell {
         gameSeriesLabel.font = UIFont(name: "Verdana", size: 14)
         
     }//end setupGameSeriesLabel()
+    
+    func setupOwningCountLabel() {
+        addSubview(owningCountLabel)
+        
+        owningCountLabel.translatesAutoresizingMaskIntoConstraints = false
+        owningCountLabel.leadingAnchor.constraint(equalTo: safeArea.leadingAnchor).isActive = true
+        owningCountLabel.centerYAnchor.constraint(equalTo: safeArea.centerYAnchor).isActive = true
+        
+    } //end setupOwningCountLabel()
     
 }//end AmiiboCell class
