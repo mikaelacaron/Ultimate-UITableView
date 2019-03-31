@@ -35,8 +35,9 @@ class AmiiboListVC: UIViewController {
         //ALWAYS add the UIView FIRST before setting contraints
         view.addSubview(tableView)
         
-        tableView.dataSource = self
         tableView.register(AmiiboCell.self, forCellReuseIdentifier: "cellid")
+        tableView.dataSource = self
+        tableView.delegate = self
         
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.topAnchor.constraint(equalTo: safeArea.topAnchor).isActive = true
@@ -74,3 +75,26 @@ extension AmiiboListVC: UITableViewDataSource {
     }
     
 }//end AmiiboListVC: UITableViewDataSource
+
+//MARK:- UITableViewDelegate
+
+extension AmiiboListVC: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        
+        let deleteAction = UIContextualAction (style: .destructive, title: "Delete") { (action, view, completionHandler) in
+            
+            //remove from data layer
+            self.amiiboList.remove(at: indexPath.row)
+            //remove from presentation layer
+            self.tableView.deleteRows(at: [indexPath], with: .automatic)
+            
+            completionHandler(true)
+            
+        }//end deleteAction
+        
+        return UISwipeActionsConfiguration(actions: [deleteAction])
+        
+    }//end trailingSwipeActionsConfigurationForRowAt
+    
+}//end AmiiboListVC: UITableViewDelegate
